@@ -1,19 +1,34 @@
 # habit tracker
+from datetime import date
 
-# habit list
-habits = []
+# user come in
+print("Hi,Welcome Back! Would you like to track your habits?")
+answer_1 = input()
+if answer_1 == "yes":
+    # habit list
+    habits = []
 
-# indv habit ask 3 time,cont add to list
-for i in range(3):
-    habit = input(f"Add habit {i+1}:")
-    habits.append(habit)
+    # date
+    today = date.today()
+    print(today)
 
-print(habits)
+    # ask 3 habit
+    for i in range(3):
+        habit = input(f"Habit {i+1}:")
+        habits.append(habit)
+    print(habits)
 
-# cont list,ask indv (if y print ok,anything else print no)
-for habit in habits:
-    question = input(f"Have you {habit} today?")
-    if question == "yes":
-        print("done")
-    else:
-        print("not done")
+    # cont list,ask indv (if yes print ok,anything else print no)
+    for habit in habits:
+        answer_2 = input(f"Have you {habit} on {today}?:\n")
+        if answer_2 == "yes":
+            print("done")
+        else:
+            print("not done")
+
+    # motivation popup streak?
+
+
+# anything else then bye
+else:
+    print("Goodbye!")
