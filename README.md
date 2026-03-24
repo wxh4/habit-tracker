@@ -1,32 +1,9 @@
 # habit-tracker
 this is a tool to track max of 3 habits,assuming response in english...might add more features
-24 March:
-motivation pop up when complete 5 (have to save/load for each list of habits-somewhat completed)
 
-need to fix data issue (main problem is 1st run max of 3 habits,2nd run load file and straightaway ask have you done (dont add anymore))
-<right now> im facing issue of continous data saved, i need to clear data from previous runs then from first run onwards 
-
-have to add new option of adding new habits?
-
-added json/os:
-os.path exists and os.path.get size>0 (ensures file exist and has data saved)
-
-Load:
-with open(v,"r") as f
-v=json.load(f) *load comes before save cus have to convert to string first*
-: open file,read date,as convention,
-:loading json string to python list then close back
-
-Overwrite data and saves:
-with open (v, "w") as f
-: open file,rewrite data as convention
-json.dump(v,f)
-: after rewrite data "dump" python list to json string convention then close
-
-list of habits:
-for i in range ()
-:for *input* loop in a range (starts from 0) so loop how many times
-variable=input(f"{i+1}:")
-:(f"v {i+1=1/2/3}:*input* ") , f"{}:"  (f meaning "{}" as value not text)
-if len() ==0:
-:meaning if list has nothing (bcus [] is list and len is num of items in list)
+features as of 24 March:
+date
+add habit (for now 3)
+track whether completed 
+save habits list,able to straightaway prompt tracking
+restart list
